@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e2b1af1b765ca14bac7a59be73372fe, type: 3}
+  m_Name: New Npcdefinition
+  m_EditorClassIdentifier: Assembly-CSharp::npcdefinition
+  name: name
+  _gender: 0
+  portrait:
+    normal: {fileID: 0}
+    suprised: {fileID: 0}
+    confused: {fileID: 0}
+    angry: {fileID: 0}
+  characterprefab: {fileID: 0}
+  likeditems: []
+  dislikeditems: []
+  schedule: 
+  generaldialogue:
+  - {fileID: 11400000, guid: 71be027e2d326854e9145227df69079d, type: 2}
+  - {fileID: 11400000, guid: 21204588d28ed5a4e857291fbc97710e, type: 2}

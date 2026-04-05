@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "965555439903",
+    "project_id": "dfarmgame",
+    "storage_bucket": "dfarmgame.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965555439903:android:1b63a1c380ffc00961c82a",
+        "android_client_info": {
+          "package_name": "com.project2dfarm.omar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAO2vKHHEYuBx2xQ-Ih795lVrXXnk7gi8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
