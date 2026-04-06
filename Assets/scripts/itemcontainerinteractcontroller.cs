@@ -9,7 +9,7 @@ public class itemcontainerinteractcontroller : MonoBehaviour
    Transform openchest;
    [SerializeField]  float maxdistance = 3f;
    
-   void awake()
+   private void Awake()
    {
       _inventorycontroller = GetComponent<inventorycontroller>();
    }

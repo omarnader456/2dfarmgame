@@ -10,7 +10,8 @@ public class trading : MonoBehaviour
    [SerializeField] private GameObject inventorypanel;
    [SerializeField] private GameObject storeParentPanel;
    private currency money;
-   itemstorepanel _itemstorepanel;
+   private itemstorepanel _itemstorepanel;
+   [SerializeField] private inventorycontroller _inventorycontroller;
    [SerializeField] itemcontainer playerinventory;
    [SerializeField] itempanel inventoryitempanel;
 
@@ -18,6 +19,10 @@ public class trading : MonoBehaviour
    {
      money = GetComponent<currency>(); 
      _itemstorepanel = storepanel.GetComponent<itemstorepanel>();
+     if (_inventorycontroller == null)
+     {
+        _inventorycontroller = GetComponent<inventorycontroller>();
+     }
    }
 
    public void begintrading(store _store)
@@ -25,6 +30,10 @@ public class trading : MonoBehaviour
       this._store = _store;
       Debug.Log("begintrading");
       _itemstorepanel.setinventory(_store.storecontent);
+      if (_inventorycontroller != null)
+      {
+         _inventorycontroller.open();
+      }
       storeParentPanel.SetActive(true);
       storepanel.SetActive(true);
       inventorypanel.SetActive(true);
@@ -37,6 +46,10 @@ public class trading : MonoBehaviour
       storepanel.SetActive(false);
       storeParentPanel.SetActive(false);
       inventorypanel.SetActive(false);
+      if (_inventorycontroller != null)
+      {
+         _inventorycontroller.close();
+      }
    }
    public void sellitem()
    {
