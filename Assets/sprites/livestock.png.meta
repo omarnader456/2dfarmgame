@@ -1,0 +1,1198 @@
+fileFormatVersion: 2
+guid: 54fff968f423eaf4d931013f4d5aec1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2334011294660904474
+    second: livestock_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cowmeat
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 598
+        width: 129
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16430808e2146020800000000000000
+      internalID: 2334011294660904474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: whiteegg
+      rect:
+        serializedVersion: 2
+        x: 2604
+        y: 1069
+        width: 77
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f528dec47deff648b375e3915b44a01
+      internalID: 1854639373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brownegg
+      rect:
+        serializedVersion: 2
+        x: 2602
+        y: 1188
+        width: 76
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f058f461f24ea3b4ab69f614e30f1f17
+      internalID: -524491728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickenwalk2
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1167
+        width: 112
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eefb68729916f343af67dd854fec514
+      internalID: -1922861227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickenwalk3
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 1167
+        width: 110
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3d236dfa70c1742bf78647f5cf259e
+      internalID: -987893319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1218
+        width: 233
+        height: 110
+      alignment: 9
+      pivot: {x: 0.56586385, y: 0.3392342}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e58fc8ef7d507f409631e3765a1d76d
+      internalID: 609484913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud2
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1220
+        width: 236
+        height: 99
+      alignment: 9
+      pivot: {x: 0.5376532, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58dcd696dda881743bede76e61404a03
+      internalID: -713370811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud4
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1199
+        width: 197
+        height: 131
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ca1eeec539db7488de013bd22dddae
+      internalID: 120193964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickenwalk1
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1167
+        width: 102
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e6bfc54efb40114dadc0e87bc45fac7
+      internalID: -1514441016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickenwalk4
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 1167
+        width: 108
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ac4677b8d10444b83d5f16cebf7d3a
+      internalID: -630417317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chicken
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 1165
+        width: 115
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5316d194db16fd042a1cb0eaeed3e867
+      internalID: -1461890744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowdeath
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 571
+        width: 238
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd67311053d60af4b820c0f59e534116
+      internalID: -2072491896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud3
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 1230
+        width: 223
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfc72a755d054a439a009cf3add8c81
+      internalID: 1979961021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud5
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 1203
+        width: 221
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1f84d31e98444409caf345bb7194be
+      internalID: 1906008411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickeneat1
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 1016
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df638c6c5039c8142b52e01ca81fd11a
+      internalID: -1788538612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickeneat3
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 1014
+        width: 114
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863b9495061b0ff4793c50c63331d00d
+      internalID: 981579168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickeneat5
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1016
+        width: 117
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eebf2c1ac233b1a4a925acb8a76dd517
+      internalID: 2128321842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowwalk3
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 793
+        width: 239
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37785fd4a1f87454d92d7c2f6b816e6a
+      internalID: -1779238446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickeneat2
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 1014
+        width: 105
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecd5829a9364aa54aadf687b1081725a
+      internalID: 761946260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickeneat4
+      rect:
+        serializedVersion: 2
+        x: 1966
+        y: 1012
+        width: 112
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954dc3c5b930250448d2f04b0e458e12
+      internalID: 364344442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chicken2
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 1014
+        width: 115
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bcf21ba9455d9478eeafcef2701e4c
+      internalID: -476990026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowwalk1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 789
+        width: 236
+        height: 153
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c430c21da078241af9676940b316b4
+      internalID: -1714388692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowwalk2
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 790
+        width: 240
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb014637b54ba31428b480627c56533b
+      internalID: 638899602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowwalk4
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 791
+        width: 233
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd2e931bfa8f3a4fbf2048b51283343
+      internalID: -489177056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickenegg3
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 813
+        width: 123
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 999dbe8dab45253498f2173d0e3d99fb
+      internalID: 1265119826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickenegg1
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 810
+        width: 111
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86627c230bd61134a90e2d1d9b34edd9
+      internalID: 216929955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickenegg2
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 808
+        width: 184
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6a9bdd1c1060c42b4c51ff7af1f31b
+      internalID: -1121746020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coweat1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 569
+        width: 231
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546497208b5187c41a1824a3d283d31c
+      internalID: 654569561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coweat2
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 564
+        width: 240
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cab55d5e469d2c488746d23513e1de9
+      internalID: 1513933691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cowdamage
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 571
+        width: 163
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4844817023b2514c91382c6977bd0d0
+      internalID: 604451433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickendamage
+      rect:
+        serializedVersion: 2
+        x: 2058
+        y: 802
+        width: 130
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c6768ac79aa6c429eb07a242764ca4
+      internalID: 1728052822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickendeath
+      rect:
+        serializedVersion: 2
+        x: 2315
+        y: 812
+        width: 153
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 911ad38195661e04891c11236f691509
+      internalID: 1129753618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: chickenmeat
+      rect:
+        serializedVersion: 2
+        x: 2596
+        y: 817
+        width: 106
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cab1a0f999918749b539f2bfc006dbe
+      internalID: -555777342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheepeat1
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 318
+        width: 201
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f84179b91324194d902482b9ac2663f
+      internalID: -1658867080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheepmove1
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 533
+        width: 197
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850805b3974538c4cb73a4d3305da5c9
+      internalID: 16632062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheepmove2
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 537
+        width: 202
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83588174cce59449a077bde722cd2aa
+      internalID: -1873733395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheepmove3
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 533
+        width: 222
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0118ff384a68ebe4fa6282bb900dfd82
+      internalID: 829616198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheep
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 299
+        width: 196
+        height: 149
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890fe684448e8af42aa7c67918acfdaf
+      internalID: -220598505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheepeat2
+      rect:
+        serializedVersion: 2
+        x: 1726
+        y: 318
+        width: 229
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b129ff0aa0786468e13876e8d250ef
+      internalID: 1926888926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheepdamage
+      rect:
+        serializedVersion: 2
+        x: 2042
+        y: 315
+        width: 175
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e55034b441c0143b8045a7f40f8656
+      internalID: -1440574434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheepdeath
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 324
+        width: 223
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d52a47669665a2446899359eaec801e0
+      internalID: -1216992908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheepmove4
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 535
+        width: 204
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9666d9e6a9c6af4daa592794b28c1d5
+      internalID: 1415543896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lambribs
+      rect:
+        serializedVersion: 2
+        x: 2581
+        y: 325
+        width: 132
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a6f3f646827064cad485132c76dc11
+      internalID: -772543550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bucket
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 77
+        width: 108
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c5d2826546fbb43a26c32e76b26a23
+      internalID: 355843281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: milkbucket
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 79
+        width: 106
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f527ba7b5499d644dbe7444d9920b661
+      internalID: 1903183454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6d6c5398802c4784c976a7dd5be1bfd3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":10.0},"gridSpriteSize":{"x":469.0,"y":153.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      brownegg: -524491728
+      bucket: 355843281
+      chicken: -1461890744
+      chicken2: -476990026
+      chickendamage: 1728052822
+      chickendeath: 1129753618
+      chickeneat1: -1788538612
+      chickeneat2: 761946260
+      chickeneat3: 981579168
+      chickeneat4: 364344442
+      chickeneat5: 2128321842
+      chickenegg1: 216929955
+      chickenegg2: -1121746020
+      chickenegg3: 1265119826
+      chickenmeat: -555777342
+      chickenwalk1: -1514441016
+      chickenwalk2: -1922861227
+      chickenwalk3: -987893319
+      chickenwalk4: -630417317
+      cloud1: 609484913
+      cloud2: -713370811
+      cloud3: 1979961021
+      cloud4: 120193964
+      cloud5: 1906008411
+      cowdamage: 604451433
+      cowdeath: -2072491896
+      coweat1: 654569561
+      coweat2: 1513933691
+      cowmeat: 2334011294660904474
+      cowwalk1: -1714388692
+      cowwalk2: 638899602
+      cowwalk3: -1779238446
+      cowwalk4: -489177056
+      lambribs: -772543550
+      livestock_18: 872199835
+      livestock_19: -334748145
+      livestock_36: 1159412189
+      livestock_37: -1833421386
+      livestock_43: -687578706
+      livestock_44: -834746043
+      livestock_48: -1783868445
+      livestock_49: 2060474794
+      livestock_5: -399012474
+      livestock_51: -573417486
+      livestock_53: -939605920
+      livestock_56: -1325188132
+      livestock_57: -190152830
+      livestock_58: 517778584
+      livestock_59: 626519550
+      milkbucket: 1903183454
+      sheep: -220598505
+      sheepdamage: -1440574434
+      sheepdeath: -1216992908
+      sheepeat1: -1658867080
+      sheepeat2: 1926888926
+      sheepmove1: 16632062
+      sheepmove2: -1873733395
+      sheepmove3: 829616198
+      sheepmove4: 1415543896
+      whiteegg: 1854639373
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
