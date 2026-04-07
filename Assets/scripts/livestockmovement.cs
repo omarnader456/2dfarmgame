@@ -1,89 +1,140 @@
 using System.Collections;
 using UnityEngine;
 
+[RequireComponent(typeof(timeagent))] 
 public class LivestockMovement : MonoBehaviour, idamageable
 {
-    public float normalspeed = 1.2f;
-    public float damagespeed = 3.0f;
+    public float normal = 1.2f;
+    public float damaged = 3.0f;
+    public float leasttime = 2.0f;
+    public float mosttime = 5.0f;
+    public int health = 30;
+
     private float currentspeed;
-    public Vector2 minbounds;
-    public Vector2 maxbounds;
-    public float leastactiontime = 2.0f;
-    public float mostactiontime = 5.0f;
-    public float deadtime = 3.0f;
-    public int health = 3;
     private SpriteRenderer spriterenderer;
     private Animator animator;
+    private timeagent _timeagent;
+    
     private Vector2 currentdirection;
+    private Vector2 lastDirection;
     private Animal currentstate = Animal.Idle;
+    private Coroutine currentFlashRoutine;
 
-    private enum Animal { Idle, Walking, Eating, Hurt, Dead }
+    private bool isnighttime = false;
+    private bool iswakingupatnight = false;
+    private float lastnightactionhour = 21f;
+
+    private enum Animal { Idle, Walking, Sleeping, Hurt, Dead }
 
     void Start()
     {
-        spriterenderer = GetComponent<SpriteRenderer>();
+        spriterenderer = GetComponentInChildren<SpriteRenderer>(); 
+        if(spriterenderer == null) spriterenderer = GetComponent<SpriteRenderer>(); 
+        
         animator = GetComponent<Animator>();
-        currentspeed = normalspeed;
+        _timeagent = GetComponent<timeagent>();
+        
+        if (_timeagent != null) _timeagent.ontimetick += CheckTime;
+
+        currentspeed = normal;
+        lastDirection = new Vector2(0, -1);
         StartCoroutine(brainlogic());
+    }
+
+    void OnDestroy()
+    {
+        if (_timeagent != null) _timeagent.ontimetick -= CheckTime;
+    }
+
+    private void CheckTime(daytimecontroller controller)
+    {
+        float currenthour = controller._currenthour; 
+        
+        isnighttime = (currenthour >= 21f || currenthour < 5f);
+
+        if (isnighttime)
+        {
+            float timediff = currenthour - lastnightactionhour;
+            if (timediff < 0) timediff += 24f; 
+
+            if (timediff >= 2f && currentstate != Animal.Hurt) 
+            {
+                iswakingupatnight = true;
+                lastnightactionhour = currenthour;
+            }
+        }
+        else 
+        {
+            lastnightactionhour = 21f; 
+            iswakingupatnight = false;
+        }
     }
 
     void Update()
     {
-        if (currentstate == Animal.Dead || currentstate == Animal.Eating) return;
-        transform.Translate(currentdirection * currentspeed * Time.deltaTime);
-        float clampedX = Mathf.Clamp(transform.position.x, minbounds.x, maxbounds.x);
-        float clampedY = Mathf.Clamp(transform.position.y, minbounds.y, maxbounds.y);
-        transform.position = new Vector2(clampedX, clampedY);
-        if (currentdirection.x > 0)
-            spriterenderer.flipX = true; 
-        else if (currentdirection.x < 0)
-            spriterenderer.flipX = false; 
+        if (currentstate == Animal.Dead) return;
+
+        if (currentdirection != Vector2.zero)
+        {
+            transform.Translate(currentdirection * currentspeed * Time.deltaTime);
+            lastDirection = currentdirection; 
+        }
+
+        animator.SetFloat("horizontal", lastDirection.x);
+        animator.SetFloat("vertical", lastDirection.y);
+        animator.SetBool("iswalking", currentstate == Animal.Walking || currentstate == Animal.Hurt);
+        animator.SetBool("issleeping", currentstate == Animal.Sleeping);
     }
 
     private IEnumerator brainlogic()
     {
-        while (currentstate != Animal.Dead)
+        while (true)
         {
-            if (currentstate == Animal.Hurt)
+            if (currentstate == Animal.Hurt || currentstate == Animal.Dead)
             {
                 yield return null;
                 continue;
             }
-            int randomaction = Random.Range(0, 3);
-            float actionduration = Random.Range(leastactiontime, mostactiontime);
+
+            if (isnighttime && !iswakingupatnight)
+            {
+                currentstate = Animal.Sleeping;
+                currentdirection = Vector2.zero;
+                yield return null; 
+                continue;
+            }
+
+            
+            int randomaction = Random.Range(0, isnighttime ? 2 : 3); 
+            float actionduration = Random.Range(leasttime, mosttime);
 
             switch (randomaction)
             {
                 case 0:
                     currentstate = Animal.Idle;
                     currentdirection = Vector2.zero;
-                    animator.SetBool("iswalking", false);
-                    animator.SetBool("iseating", false);
                     break;
-
                 case 1:
                     currentstate = Animal.Walking;
-                    animator.SetBool("iswalking", true);
-                    animator.SetBool("iseating", false);
-                    
                     float directionx = Random.Range(-1, 2); 
                     float directiony = Random.Range(-1, 2);
                     currentdirection = new Vector2(directionx, directiony).normalized;
-                    
                     if (currentdirection == Vector2.zero) currentdirection = Vector2.left;
                     break;
-
                 case 2:
-                    currentstate = Animal.Eating;
+                    currentstate = Animal.Sleeping;
                     currentdirection = Vector2.zero;
-                    animator.SetBool("iswalking", false);
-                    animator.SetBool("iseating", true);
                     break;
             }
+            
             yield return new WaitForSeconds(actionduration);
+
+            if (iswakingupatnight)
+            {
+                iswakingupatnight = false;
+            }
         }
     }
-
 
     public void calculatedamage(ref int damage)
     {
@@ -92,15 +143,26 @@ public class LivestockMovement : MonoBehaviour, idamageable
     public void applydamage(int damage)
     {
         if (currentstate == Animal.Dead) return;
+        
+        calculatedamage(ref damage);
         health -= damage;
+
+        if (currentstate == Animal.Sleeping)
+        {
+            iswakingupatnight = false;
+        }
+
+        checkstate();
     }
 
     public void checkstate()
     {
         if (currentstate == Animal.Dead) return;
+        
         if (health <= 0)
         {
-            StartCoroutine(deathroutine());
+            currentstate = Animal.Dead;
+            Destroy(gameObject); 
         }
         else
         {
@@ -108,27 +170,39 @@ public class LivestockMovement : MonoBehaviour, idamageable
         }
     }
 
-
     private IEnumerator damageroutine()
     {
         currentstate = Animal.Hurt;
-        animator.SetTrigger("hit"); 
-        animator.SetBool("iseating", false);
-        currentspeed = damagespeed;
+        currentspeed = damaged;
+        
         currentdirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        if (currentdirection == Vector2.zero) currentdirection = Vector2.right;
+
+        if (currentFlashRoutine != null) StopCoroutine(currentFlashRoutine);
+        currentFlashRoutine = StartCoroutine(FlashRed());
+
         yield return new WaitForSeconds(1.5f);
-        currentspeed = normalspeed;
-        currentstate = Animal.Idle; 
+
+        if (currentstate != Animal.Dead)
+        {
+            currentspeed = normal;
+            currentstate = Animal.Idle; 
+        }
     }
 
-    private IEnumerator deathroutine()
+    private IEnumerator FlashRed()
     {
-        currentstate = Animal.Dead;
-        currentdirection = Vector2.zero; 
-        animator.SetBool("iswalking", false);
-        animator.SetBool("iseating", false);
-        animator.SetTrigger("die"); 
-        yield return new WaitForSeconds(deadtime);
-        Destroy(gameObject);
+        float duration = 1.5f;
+        float endTime = Time.time + duration;
+        
+        while (Time.time < endTime && currentstate != Animal.Dead)
+        {
+            if(spriterenderer != null) spriterenderer.color = Color.red;
+            yield return new WaitForSeconds(0.15f);
+            if(spriterenderer != null) spriterenderer.color = Color.white;
+            yield return new WaitForSeconds(0.15f);
+        }
+        
+        if (spriterenderer != null) spriterenderer.color = Color.white;
     }
 }

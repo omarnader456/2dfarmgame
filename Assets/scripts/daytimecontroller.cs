@@ -22,7 +22,7 @@ public class daytimecontroller : MonoBehaviour
     List<timeagent> agents;
     [SerializeField]  float startattime = 28800f;
     [SerializeField] private float morningtime = 28800f;
-
+    public float _currenthour { get { return time / 3600f; } }
     private void Awake()
     {
        agents = new List<timeagent>(); 
