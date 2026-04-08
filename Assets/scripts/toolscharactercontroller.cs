@@ -23,6 +23,9 @@ public class toolscharactercontroller : MonoBehaviour
     [SerializeField] private iconhighlight _iconhighlight;
     private attackcontroller _attackcontroller;
     [SerializeField] private int weaponenergycost = 5;
+    [SerializeField] private float timeout = 1f;
+    private float timer;
+    characterlevel _characterlevel;
     
     void Awake()
     {
@@ -32,10 +35,15 @@ public class toolscharactercontroller : MonoBehaviour
         _toolbarcontroller = GetComponent<toolbarcontroller>();
         _animator = GetComponent<Animator>();
         _attackcontroller =  GetComponent<attackcontroller>();
+        _characterlevel = GetComponent<characterlevel>();
     }
     
     private bool Usetoolworld()
     {
+        if (timer > 0)
+        {
+            return false;
+        }
         Vector2 position = rigidbody.position + _character2d.lastmotionvector * offsetdistance;
         item _item = _toolbarcontroller.getitem;
         if (_item == null)
@@ -47,22 +55,38 @@ public class toolscharactercontroller : MonoBehaviour
         {
             return false;
         }
-        energycost(_item.onaction.energycost);
+        energycost(getenergycost(_item.onaction));
         _animator.SetTrigger("act");
         bool complete = _item.onaction.onapply(position);
         if (complete == true)
         {
+            _characterlevel.addexp(_item.onaction._skilltype,_item.onaction.skillexpreward);
             if (_item._onitemused != null)
             {
                 _item._onitemused.onitemused(_item, gamemanager.instance.inventorycontainer);
             }
         }
+        timer = timeout;
         return complete;
+    }
+
+    public int getenergycost(toolaction _action)
+    {
+        int _energycost = _action.energycost;
+        _energycost -= _characterlevel.getlevel(_action._skilltype);
+        if (_energycost < 1)
+        {
+            _energycost = 1;
+        }
+        return _energycost;
     }
 
     private void Update()
     {
-        
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+        }
         selecttile();
         canselectcheck();
         marker();
@@ -79,6 +103,10 @@ public class toolscharactercontroller : MonoBehaviour
 
     public void weaponaction()
     {
+        if (timer > 0)
+        {
+            return;
+        }
         item _item = _toolbarcontroller.getitem;
         if (_item == null)
         {
@@ -90,8 +118,10 @@ public class toolscharactercontroller : MonoBehaviour
             return;
         }
 
+        
         energycost(weaponenergycost);
         _attackcontroller.attack(_item.damage, _character2d.lastmotionvector);
+        timer = timeout;
     }
 
     private void energycost(int cost)
@@ -122,6 +152,10 @@ public class toolscharactercontroller : MonoBehaviour
 
     private void usetoolgrid()
     {
+        if (timer > 0)
+        {
+            return;
+        }
         if (selectable == true)
         {
             item _item = _toolbarcontroller.getitem;
@@ -135,17 +169,20 @@ public class toolscharactercontroller : MonoBehaviour
             {
                 return;
             }
-            energycost(_item.ontilemapaction.energycost);
+            energycost(getenergycost(_item.ontilemapaction));
             _animator.SetTrigger("act");
             bool complete = _item.ontilemapaction.onapplytotilemap(selectedtileposition, tilemapreadercontroller, _item);
             if (complete == true)
             {
+                _characterlevel.addexp(_item.ontilemapaction._skilltype,_item.ontilemapaction.skillexpreward);
                 if (_item._onitemused != null)
                 {
                     _item._onitemused.onitemused(_item, gamemanager.instance.inventorycontainer);
+                    _characterlevel.addexp(_item._onitemused._skilltype,100);
                 }
             }
         } 
+        timer = timeout;
     }
 
     private void pickuptile()

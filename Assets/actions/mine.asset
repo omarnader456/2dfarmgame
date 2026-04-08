@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad19a410dd6aad4aa3734f83632798a, type: 3}
   m_Name: mine
   m_EditorClassIdentifier: Assembly-CSharp::gatherresourcenode
+  _skilltype: 1
+  skillexpreward: 100
   energycost: 5
   interactablearea: 1
   canhitnodesoftype: 02000000

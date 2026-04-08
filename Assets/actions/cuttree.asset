@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad19a410dd6aad4aa3734f83632798a, type: 3}
   m_Name: cuttree
   m_EditorClassIdentifier: Assembly-CSharp::gatherresourcenode
-  energycost: 3
+  _skilltype: 0
+  skillexpreward: 100
+  energycost: 5
   interactablearea: 1
   canhitnodesoftype: 01000000

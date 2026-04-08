@@ -124,6 +124,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\scripts\dooropenclose.cs" />
     <Compile Include="Assets\scripts\dialoguecontainer.cs" />
+    <Compile Include="Assets\scripts\characterlevel.cs" />
     <Compile Include="Assets\scripts\inventorycontroller.cs" />
     <Compile Include="Assets\scripts\cropsmanager.cs" />
     <Compile Include="Assets\scripts\highlightcontroller.cs" />

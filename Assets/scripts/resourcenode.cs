@@ -21,7 +21,11 @@ public class resourcenode : toolhit
             position.y += spread * UnityEngine.Random.value - spread / 2;
             itemspawnmanager.instance.spawnitem(position, item, itemcountinonedrop);
         }
-
+        spawnedobject _gameobject = GetComponent<spawnedobject>();
+        if (_gameobject != null)
+        {
+            _gameobject.spawnedobjectdestroy();
+        }
         Destroy(gameObject);
     }
 

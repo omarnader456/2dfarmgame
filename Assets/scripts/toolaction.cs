@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class toolaction : ScriptableObject
 {
+    public typeofskill _skilltype;
+    public int skillexpreward = 100;
     public int energycost = 0;
     public virtual bool onapply(Vector2 worldpoint)
     {
