@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public enum weatherstates
@@ -19,12 +20,14 @@ public class weathermanager : timeagent
    [SerializeField] private ParticleSystem heavyobject;
    [SerializeField] private ParticleSystem snowobject;
    [SerializeField] private ParticleSystem rainwithlightning;
+   [SerializeField] private TextMeshProUGUI weathertext;
 
    private void Start()
    {
        init();
        ontimetick += randomweatherchangecheck;
        updateweather();
+       updateweathertext();
    }
    public void randomweatherchangecheck(daytimecontroller  _daytimecontroller)
    {
@@ -46,6 +49,12 @@ public class weathermanager : timeagent
        currentstate = newstate;
        Debug.Log("changeweather " + newstate);
        updateweather();
+       updateweathertext();
+   }
+
+   public void updateweathertext()
+   {
+       weathertext.text = "weather: " + currentstate.ToString();
    }
 
    private void updateweather()

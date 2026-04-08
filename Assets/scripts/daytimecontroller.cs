@@ -16,6 +16,7 @@ public class daytimecontroller : MonoBehaviour
     [SerializeField] private Color daycolor = Color.white;
     [SerializeField] private AnimationCurve nightcurve;
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private float timescale = 60f;
     [SerializeField] private Light2D globallight;
     public int days;
@@ -23,6 +24,30 @@ public class daytimecontroller : MonoBehaviour
     [SerializeField]  float startattime = 28800f;
     [SerializeField] private float morningtime = 28800f;
     public float _currenthour { get { return time / 3600f; } }
+    public enum daysoftheweek
+    {
+        Sunday,
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday
+    }
+
+    public enum seasons
+    {
+        Spring,
+        Summer, 
+        Winter,
+        Autumn,
+    }
+
+    private seasons _seasons;
+    private const int seasonlength = 7;
+    public daysoftheweek _daysoftheweek;
+    [SerializeField] private TextMeshProUGUI seasonstext;
+    public int totaldays;
     private void Awake()
     {
        agents = new List<timeagent>(); 
@@ -31,6 +56,8 @@ public class daytimecontroller : MonoBehaviour
     private void Start()
     {
         time = startattime;
+        updateweek();
+        updateseasontext();
     }
 
     public void subscribe(timeagent _timeagent)
@@ -82,8 +109,7 @@ public class daytimecontroller : MonoBehaviour
 
     private int calculatephase()
     {
-        return (int)(time / phaselength) + (int)(days*phaseinday);
-    }
+        return (int)(time / phaselength) + (int)(totaldays*phaseinday);    }
 
     private void Update()
     {
@@ -106,7 +132,43 @@ public class daytimecontroller : MonoBehaviour
     {
         time -= secondsinday;
         days += 1;
-        
+        totaldays += 1;
+        int daynumber = (int) _daysoftheweek;
+        daynumber += 1;
+        if (daynumber >= 7)
+        {
+            daynumber = 0;
+        }
+        _daysoftheweek = (daysoftheweek) daynumber;
+        _text.text = "week day: "+_daysoftheweek.ToString();
+        updateweek();
+        if (days >= seasonlength)
+        {
+            nextseason();
+        }
+    }
+
+    private void nextseason()
+    {
+        days = 0;
+        int seasonnumber = (int)_seasons;
+        seasonnumber += 1;
+        if (seasonnumber >= 4)
+        {
+            seasonnumber = 0;
+        }
+        _seasons = (seasons) seasonnumber;
+        updateseasontext();
+    }
+
+    public void updateseasontext()
+    {
+        seasonstext.text = "season " + _seasons.ToString();
+    }
+
+    public void updateweek()
+    {
+        _text.text = "week day: "+_daysoftheweek.ToString();
     }
 
     public void skiptime(float seconds = 0, float minutes =0, float hours = 0)
