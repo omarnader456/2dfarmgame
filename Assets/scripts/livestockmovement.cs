@@ -1,8 +1,9 @@
 using System.Collections;
 using UnityEngine;
 
-[RequireComponent(typeof(timeagent))] 
-public class LivestockMovement : MonoBehaviour, idamageable
+[RequireComponent(typeof(timeagent))]
+[RequireComponent(typeof(Rigidbody2D))] 
+public class livestockmovement : MonoBehaviour, idamageable
 {
     public float normal = 1.2f;
     public float damaged = 3.0f;
@@ -14,11 +15,13 @@ public class LivestockMovement : MonoBehaviour, idamageable
     private SpriteRenderer spriterenderer;
     private Animator animator;
     private timeagent _timeagent;
+    private Rigidbody2D rb2d; 
+    private Collider2D confinerCollider; 
     
     private Vector2 currentdirection;
-    private Vector2 lastDirection;
+    private Vector2 lastdirection;
     private Animal currentstate = Animal.Idle;
-    private Coroutine currentFlashRoutine;
+    private Coroutine currentflashroutine;
 
     private bool isnighttime = false;
     private bool iswakingupatnight = false;
@@ -32,21 +35,28 @@ public class LivestockMovement : MonoBehaviour, idamageable
         if(spriterenderer == null) spriterenderer = GetComponent<SpriteRenderer>(); 
         
         animator = GetComponent<Animator>();
+        rb2d = GetComponent<Rigidbody2D>();
         _timeagent = GetComponent<timeagent>();
         
-        if (_timeagent != null) _timeagent.ontimetick += CheckTime;
+        if (_timeagent != null) _timeagent.ontimetick += checktime;
+
+        GameObject confinerObj = GameObject.Find("cameraconfiner");
+        if (confinerObj != null)
+        {
+            confinerCollider = confinerObj.GetComponent<Collider2D>();
+        }
 
         currentspeed = normal;
-        lastDirection = new Vector2(0, -1);
+        lastdirection = new Vector2(0, -1);
         StartCoroutine(brainlogic());
     }
 
     void OnDestroy()
     {
-        if (_timeagent != null) _timeagent.ontimetick -= CheckTime;
+        if (_timeagent != null) _timeagent.ontimetick -= checktime;
     }
 
-    private void CheckTime(daytimecontroller controller)
+    private void checktime(daytimecontroller controller)
     {
         float currenthour = controller._currenthour; 
         
@@ -70,20 +80,33 @@ public class LivestockMovement : MonoBehaviour, idamageable
         }
     }
 
-    void Update()
+    void FixedUpdate() 
     {
-        if (currentstate == Animal.Dead) return;
+        if (currentstate == Animal.Dead)
+        {
+            rb2d.linearVelocity = Vector2.zero;
+            return;
+        }
 
         if (currentdirection != Vector2.zero)
         {
-            transform.Translate(currentdirection * currentspeed * Time.deltaTime);
-            lastDirection = currentdirection; 
+            rb2d.linearVelocity = currentdirection * currentspeed;
+            lastdirection = currentdirection; 
+        }
+        else
+        {
+            rb2d.linearVelocity = Vector2.zero;
         }
 
-        animator.SetFloat("horizontal", lastDirection.x);
-        animator.SetFloat("vertical", lastDirection.y);
+        animator.SetFloat("horizontal", lastdirection.x);
+        animator.SetFloat("vertical", lastdirection.y);
         animator.SetBool("iswalking", currentstate == Animal.Walking || currentstate == Animal.Hurt);
         animator.SetBool("issleeping", currentstate == Animal.Sleeping);
+
+        if (confinerCollider != null)
+        {
+            transform.position = confinerCollider.ClosestPoint(transform.position);
+        }
     }
 
     private IEnumerator brainlogic()
@@ -104,7 +127,6 @@ public class LivestockMovement : MonoBehaviour, idamageable
                 continue;
             }
 
-            
             int randomaction = Random.Range(0, isnighttime ? 2 : 3); 
             float actionduration = Random.Range(leasttime, mosttime);
 
@@ -162,6 +184,13 @@ public class LivestockMovement : MonoBehaviour, idamageable
         if (health <= 0)
         {
             currentstate = Animal.Dead;
+            
+            spawnedobject spawnTracker = GetComponent<spawnedobject>();
+            if (spawnTracker != null)
+            {
+                spawnTracker.spawnedobjectdestroy();
+            }
+
             Destroy(gameObject); 
         }
         else
@@ -178,8 +207,8 @@ public class LivestockMovement : MonoBehaviour, idamageable
         currentdirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
         if (currentdirection == Vector2.zero) currentdirection = Vector2.right;
 
-        if (currentFlashRoutine != null) StopCoroutine(currentFlashRoutine);
-        currentFlashRoutine = StartCoroutine(FlashRed());
+        if (currentflashroutine != null) StopCoroutine(currentflashroutine);
+        currentflashroutine = StartCoroutine(flashred());
 
         yield return new WaitForSeconds(1.5f);
 
@@ -190,7 +219,7 @@ public class LivestockMovement : MonoBehaviour, idamageable
         }
     }
 
-    private IEnumerator FlashRed()
+    private IEnumerator flashred()
     {
         float duration = 1.5f;
         float endTime = Time.time + duration;

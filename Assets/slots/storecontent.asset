@@ -14,6 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::itemcontainer
   slots:
   - itm: {fileID: 11400000, guid: d1e3dd8b78db7c947a0b5bc0231a9274, type: 2}
-    count: 0
+    count: 1
   - itm: {fileID: 11400000, guid: ec930b3b76b45904ba10055b8cc00c54, type: 2}
-    count: 0
+    count: 1
+  - itm: {fileID: 11400000, guid: 00931c3adee4b2e40b5848f8c45ce290, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: 1a74b86fc1b58dd4b8a35b7ebaaa2716, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: 22d238f4fbcbfb1489fd4f80b4d680b6, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: 47f9218909b27f8498deedae222deb1d, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: d5b5dd778eadaae4080d67f3f826df9e, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: a654071f23258264ea151d15b5a17954, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: 2297b2ff60e783940a2731cdaccd9e00, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: 947ea3c99c7fec84cb9122f4dd1228bd, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: 16d2be9cec3c624488db1fb1a1b433c9, type: 2}
+    count: 1
+  - itm: {fileID: 11400000, guid: 3d4f1988163d31c458339b3028e34f61, type: 2}
+    count: 1

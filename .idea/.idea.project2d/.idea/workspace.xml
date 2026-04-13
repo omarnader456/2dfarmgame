@@ -6,45 +6,35 @@
   <component name="ChangeListManager">
     <list default="true" id="3a337204-8e43-4489-a86d-7c98ee00a4f5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.project2d/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.project2d/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/FirebaseApp.androidlib/res/values/google-services.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/FirebaseApp.androidlib/res/values/google-services.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/mainTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Android/settingsTemplate.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/beachscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/beachscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/cavescene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/cavescene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/cityscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/cityscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/essential.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/essential.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/forestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/forestscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/mainmenuscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/mainmenuscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/google-services-desktop.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/google-services-desktop.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/farmscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/farmscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/npctestscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/npctestscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/storescene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/storescene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/google-services-desktop.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/google-services-desktop.json.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Anton SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Oswald Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/cropscontainer/scene1cropscontainer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/cropscontainer/scene1cropscontainer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/google-services.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/google-services.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/placeable/scene1placeableobjects.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/placeable/scene1placeableobjects.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/prefabs/chestobject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/chestobject.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/characterinteractcontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/characterinteractcontroller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/gamemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/gamemanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/gamescenemanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/gamescenemanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/itemcontainerinteractcontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/itemcontainerinteractcontroller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/itempanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/itempanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/lootcontainerinteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/lootcontainerinteract.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/mainmenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/mainmenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/placeableobjectmanager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/placeableobjectmanager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/toolbarcontroller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/toolbarcontroller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/slots/inventory.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/slots/inventory.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Electronic Highway Sign SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/crafting/knownrecipes.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/crafting/knownrecipes.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/Mushroom-Idle_0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/Mushroom-Idle_0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/prefabs/livestock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/prefabs/livestock.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/chaseenemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/chaseenemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/jsonstringlist.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/jsonstringlist.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/livestockmovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/livestockmovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/npcmove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/npcmove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/talkinteract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/talkinteract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/slots/storecontent.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/slots/storecontent.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/animationclips/Mushroom-Idle_0.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/sprites/animationclips/Mushroom-Idle_0.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/sprites/animationclips/mushroomwalk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/sprites/animationclips/mushroomwalk.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker2-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker3-prev.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0-0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0-0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker1-0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker1-0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AndroidResolverDependencies.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-6000.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
@@ -208,6 +198,7 @@
       <workItem from="1775982197649" duration="9892000" />
       <workItem from="1776002729823" duration="12025000" />
       <workItem from="1776080120157" duration="4072000" />
+      <workItem from="1776093585479" duration="9880000" />
     </task>
     <servers />
   </component>
