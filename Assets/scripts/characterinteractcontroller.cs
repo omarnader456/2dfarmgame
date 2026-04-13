@@ -19,18 +19,25 @@ public class characterinteractcontroller : MonoBehaviour
     }
     private void interact()
     {
+        Debug.Log("1.  Right-Click  interact pressed.");
+        
         Vector2 position = rigidbody.position + charactercontroller.lastmotionvector * offsetdistance;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(position, interactablearea);
-        foreach (Collider2D c in colliders )
+        
+        Debug.Log($"2. Interaction circle found {colliders.Length} colliders.");
+
+        foreach (Collider2D c in colliders)
         {
+            Debug.Log($"3. Checking collider on GameObject: {c.gameObject.name}");
+            
             interactable hit = c.GetComponent<interactable>();
             if (hit is not null)
             {
+                Debug.Log($"4. interactable script found on: {c.gameObject.name}  interact signal sent.");
                 hit.interact(_character);
                 break;
             }
         }
-        
     }
 
     private void Update()

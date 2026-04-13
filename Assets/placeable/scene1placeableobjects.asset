@@ -12,8 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cb06dc1730ce440b77535beb01b9a6, type: 3}
   m_Name: scene1placeableobjects
   m_EditorClassIdentifier: Assembly-CSharp::placeableobjectcontainer
-  placeableobjects:
-  - placeditem: {fileID: 11400000, guid: 1a74b86fc1b58dd4b8a35b7ebaaa2716, type: 2}
-    targetobject: {fileID: 0}
-    positionongrid: {x: -10, y: -1, z: 0}
-    objectstate: 
+  placeableobjects: []

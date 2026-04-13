@@ -35,7 +35,10 @@ public class gamescenemanager : MonoBehaviour
       Debug.Log(to + " gamescenemanager _transition coroutine function");
       Debug.Log(targetposition + " gamescenemanager _transition coroutine function");
       yield return new WaitForSeconds(1f / (_screentint.speed + 0.1f));
-
+      dataorchestrator orchestrator = FindFirstObjectByType<dataorchestrator>();
+      if (dataorchestrator.instance != null) {
+          dataorchestrator.instance.savegame();
+      }
       load = SceneManager.LoadSceneAsync(to, LoadSceneMode.Additive);
       yield return new WaitUntil(() => load.isDone);
       

@@ -9,6 +9,10 @@ public class gamemanager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        if (inventorycontainer != null && (inventorycontainer.slots == null || inventorycontainer.slots.Count == 0))
+        {
+            inventorycontainer.init();
+        }
     }
 
     public GameObject player;

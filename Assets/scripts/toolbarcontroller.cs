@@ -12,7 +12,24 @@ public class toolbarcontroller : MonoBehaviour
     {
         get
         {
-            return gamemanager.instance.inventorycontainer.slots[selectedtool];
+            var slots = gamemanager.instance.inventorycontainer.slots;
+            
+            if (slots == null || slots.Count == 0 || selectedtool >= slots.Count)
+            {
+                return null;
+            }
+            return slots[selectedtool];
+        }
+    }
+
+    public item getitem
+    {
+        get
+        {
+            itemslot slot = getitemslot;
+            if (slot == null) return null;
+            
+            return slot.itm;
         }
     }
 
@@ -23,13 +40,7 @@ public class toolbarcontroller : MonoBehaviour
     }
     
 
-    public item getitem
-    {
-        get
-        {
-            return gamemanager.instance.inventorycontainer.slots[selectedtool].itm;
-        }
-    }
+   
 
     private void Update()
     {

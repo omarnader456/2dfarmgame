@@ -46,13 +46,19 @@ public class itempanel : MonoBehaviour
     private void OnEnable()
     {
         clear();
-        inventory.change += show;
-        show();
+        if (inventory != null)
+        {
+            inventory.change += show;
+            show();
+        }
     }
 
     private void OnDisable()
     {
-        inventory.change -= show;
+        if (inventory != null)
+        {
+            inventory.change -= show;
+        }
     }
 
     public void setinventory(itemcontainer newinventory)

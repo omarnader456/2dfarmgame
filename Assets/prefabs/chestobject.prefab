@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3448279425046881567}
   - component: {fileID: 2341672722521706841}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: chestopened
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5492705491605283021}
   - component: {fileID: 8162701635478568813}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: chestclosed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 6107209843085380784}
   - component: {fileID: 4226130668939978375}
   - component: {fileID: 992604678765266870}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: chestobject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +269,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.07, y: -0.023}
+  m_Offset: {x: 0.020760775, y: -0.025212348}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -279,5 +279,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.78, y: 0.8}
+  m_Size: {x: 0.8369194, y: 0.7678946}
   m_EdgeRadius: 0
