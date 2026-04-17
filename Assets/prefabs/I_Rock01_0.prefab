@@ -157,3 +157,6 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 947ea3c99c7fec84cb9122f4dd1228bd, type: 2}
   itemcountinonedrop: 1
   nodetype: 2
+  secondaryItem: {fileID: 11400000, guid: 47f9218909b27f8498deedae222deb1d, type: 2}
+  secondaryDropChance: 0.2
+  secondaryItemCount: 3

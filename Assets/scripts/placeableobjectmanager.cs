@@ -23,7 +23,6 @@ public class placeableobjectmanager : MonoBehaviour, ipersistant
    private void Start()
    {
        gamemanager.instance.GetComponent<placeableobjectsreferencemanager>()._placeableobjectmanager = this;
-      
        visualizemap();
    }
 
@@ -54,7 +53,7 @@ public class placeableobjectmanager : MonoBehaviour, ipersistant
       Vector3 position = targettilemap.CellToWorld(_placeableobject.positionongrid) + targettilemap.cellSize / 2;
       obj.transform.position = position;
       
-      ipersistant persistant = obj.GetComponent<ipersistant>();
+      ipersistant persistant = obj.GetComponentInChildren<ipersistant>();
       if (persistant != null)
       {
          persistant.load(_placeableobject.objectstate);
@@ -77,7 +76,6 @@ public class placeableobjectmanager : MonoBehaviour, ipersistant
       _placeableobjects.remove(placedobject);
    }
 
-
    public string read()
    {
         placedobjectssavedata data = new placedobjectssavedata();
@@ -89,7 +87,7 @@ public class placeableobjectmanager : MonoBehaviour, ipersistant
             
             if (p.targetobject != null)
             {
-                ipersistant persistant = p.targetobject.GetComponent<ipersistant>();
+                ipersistant persistant = p.targetobject.GetComponentInChildren<ipersistant>();
                 if (persistant != null)
                 {
                     p.objectstate = persistant.read();
@@ -127,5 +125,13 @@ public class placeableobjectmanager : MonoBehaviour, ipersistant
         }
         
         visualizemap();
+   }
+   private void OnDestroy()
+   {
+       if (dataorchestrator.instance != null && !dataorchestrator.instance.isapplicationquitting)
+       {
+           string id = dataorchestrator.instance.getobjectID(this);
+           dataorchestrator.instance.update_livedata(id, read());
+       }
    }
 }

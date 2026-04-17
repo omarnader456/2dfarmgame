@@ -21,7 +21,7 @@ public class dataorchestrator : MonoBehaviour
 
     private Dictionary<string, string> livedatamap = new Dictionary<string, string>();
     private bool hasinitialized = false;
-    private bool isapplicationquitting = false; 
+    public bool isapplicationquitting { get; private set; } = false; 
 
     private void Awake()
     {
@@ -40,6 +40,7 @@ public class dataorchestrator : MonoBehaviour
     private void Start()
     {
         loadgamefromdisk();
+        InvokeRepeating(nameof(savegame), 15f, 15f); 
     }
 
     public void loadgamefromdisk()
@@ -83,12 +84,7 @@ public class dataorchestrator : MonoBehaviour
         foreach (var p in persistants)
         {
             MonoBehaviour mb = p as MonoBehaviour;
-
-            
-            if (targetscene.HasValue && mb.gameObject.scene != targetscene.Value)
-            {
-                continue; 
-            }
+            if (targetscene.HasValue && mb.gameObject.scene != targetscene.Value) continue; 
 
             string id = getobjectID(p);
             if (livedatamap.TryGetValue(id, out string data)) {
@@ -103,10 +99,14 @@ public class dataorchestrator : MonoBehaviour
         }
     }
 
+    public void update_livedata(string id, string data)
+    {
+        livedatamap[id] = data;
+    }
+
     public void savegame()
     {
         if (currentdata == null) currentdata = new datawrapper();
-        Debug.Log(" dataorchestrator initiating savegame");
 
         var persistants = findpersistantobjects();
         foreach (var p in persistants) 
@@ -116,14 +116,7 @@ public class dataorchestrator : MonoBehaviour
                 string id = getobjectID(p);
                 string newdata = p.read();
 
-                if (!string.IsNullOrEmpty(newdata)) 
-                {
-                    livedatamap[id] = newdata;
-                }
-                else
-                {
-                    Debug.LogWarning($" Save Data for '{id}' was null. using old data to prevent wipe.");
-                }
+                if (!string.IsNullOrEmpty(newdata)) livedatamap[id] = newdata;
             }
             catch (Exception e)
             {
@@ -136,7 +129,6 @@ public class dataorchestrator : MonoBehaviour
 
         string json = JsonUtility.ToJson(currentdata);
         firebasemanager.instance.savelocallpushfirebase(json);
-        Debug.Log("game saved successfully!");
     }
 
     private List<ipersistant> findpersistantobjects()
@@ -147,7 +139,7 @@ public class dataorchestrator : MonoBehaviour
             .ToList();
     }
 
-    private string getobjectID(ipersistant obj)
+    public string getobjectID(ipersistant obj) 
     {
         MonoBehaviour mb = obj as MonoBehaviour;
         string objectname = mb.gameObject.name;
@@ -185,7 +177,6 @@ public class dataorchestrator : MonoBehaviour
     private void OnApplicationQuit()
     {
         isapplicationquitting = true;
-        Debug.Log(" application quit triggered attempting final save");
         savegame();
     }
 }

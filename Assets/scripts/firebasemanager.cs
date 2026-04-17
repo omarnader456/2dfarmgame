@@ -104,15 +104,22 @@ public class firebasemanager : MonoBehaviour
         try
         {
             DataSnapshot snapshot = await database.Child("users").Child(user.UserId).Child("slot_" + currentsaveslot).GetValueAsync();
-            
+        
             if (snapshot != null && snapshot.Exists)
             {
-                string json = snapshot.GetRawJsonValue();
-                File.WriteAllText(path, json);
+                string cloudJson = snapshot.GetRawJsonValue();
+                File.WriteAllText(path, cloudJson);
+                Debug.Log("Successfully downloaded and applied Cloud Save.");
             }
-            else if (!File.Exists(path))
+            else if (File.Exists(path))
             {
-                File.WriteAllText(path, "{}"); 
+                string localData = File.ReadAllText(path);
+                await database.Child("users").Child(user.UserId).Child("slot_" + currentsaveslot).SetRawJsonValueAsync(localData);
+                Debug.Log("Cloud was empty. Uploaded Local Save to Cloud.");
+            }
+            else
+            {
+                if (!File.Exists(path)) File.WriteAllText(path, "{}"); 
             }
         }
         catch(Exception e)

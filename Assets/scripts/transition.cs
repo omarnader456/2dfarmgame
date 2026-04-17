@@ -1,8 +1,10 @@
 using Unity.Cinemachine;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public enum transitiontype
 {
@@ -50,16 +52,19 @@ public class transition : MonoBehaviour
                 break;
         }
     }
+    
     private void OnDrawGizmos()
     {
+#if UNITY_EDITOR
         if (_transitiontype == transitiontype.scene)
         {
             Handles.Label(transform.position, "to " + scenenametotransition);
         }
+#endif
 
-        if (_transitiontype == transitiontype.warp)
+        if (_transitiontype == transitiontype.warp && destination != null)
         {
-            Gizmos.DrawLine(transform.position,destination.position);
+            Gizmos.DrawLine(transform.position, destination.position);
         }
     }
 }

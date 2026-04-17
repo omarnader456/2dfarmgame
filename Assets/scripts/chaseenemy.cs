@@ -37,10 +37,13 @@ public class chaseenemy : MonoBehaviour
         Collider2D[] targets = Physics2D.OverlapBoxAll(transform.position, attacksize, 0f);
         for (int i = 0; i < targets.Length; i++)
         {
-            damageable _character = targets[i].GetComponent<damageable>();
-            if (_character != null)
+            if (targets[i].gameObject == this.gameObject) continue;
+            character player = targets[i].GetComponent<character>();
+            damageable _damageable = targets[i].GetComponent<damageable>();
+    
+            if (player != null)
             {
-                _character.takedamage(damage);
+                _damageable.takedamage(damage);
             }
         } 
     }

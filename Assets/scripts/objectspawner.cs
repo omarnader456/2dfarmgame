@@ -32,7 +32,6 @@ public class objectspawner : MonoBehaviour
       else
       {
          spawn(null);
-         //Destroy(gameObject);
       } 
    }
 
@@ -72,7 +71,6 @@ public class objectspawner : MonoBehaviour
          t.SetParent(transform);
          if (onetime == false)
          {
-            //t.SetParent(transform);
             spawnedobject _spawnobject = obj.AddComponent<spawnedobject>();
             spawnobjects.Add(_spawnobject);
             _spawnobject.objectid = id;

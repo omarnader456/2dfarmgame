@@ -8,7 +8,8 @@ public class charactercontroller2d : MonoBehaviour
 
 {
     private Rigidbody2D rigidbody2d;
-
+    public touchjoystick joystick;
+    public touchbutton sprintbutton;
     [SerializeField] private float speed = 2f;
     private Vector2 motionVector;
     [SerializeField] private float runspeed = 5f;
@@ -24,17 +25,16 @@ public class charactercontroller2d : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            running = true;
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            running = false;
-        }
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift) || (sprintbutton != null && sprintbutton.ispressed);
+        running = isSprinting;
+            
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+        if (joystick != null && joystick.Direction != Vector2.zero)
+        {
+            horizontal = joystick.Direction.x;
+            vertical = joystick.Direction.y;
+        }
         motionVector.x = horizontal;
         motionVector.y = vertical;
         

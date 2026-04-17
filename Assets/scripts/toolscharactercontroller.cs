@@ -1,9 +1,9 @@
-
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 public class toolscharactercontroller : MonoBehaviour
 {
@@ -87,10 +87,49 @@ public class toolscharactercontroller : MonoBehaviour
         {
             timer -= Time.deltaTime;
         }
-        selecttile();
-        canselectcheck();
+
+        Vector3 targetScreenPosition = Input.mousePosition;
+        bool isActionTriggered = false;
+
+        if (Input.GetMouseButtonDown(0) && Input.touchCount == 0)
+        {
+            if (EventSystem.current == null || !EventSystem.current.IsPointerOverGameObject())
+            {
+                isActionTriggered = true;
+                targetScreenPosition = Input.mousePosition;
+            }
+        }
+
+        if (Input.touchCount > 0)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Touch touch = Input.GetTouch(i);
+                
+                if (EventSystem.current != null && !EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                {
+                    targetScreenPosition = touch.position;
+                }
+
+                if (touch.phase == TouchPhase.Began)
+                {
+                    if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                    {
+                        continue; 
+                    }
+                    
+                    isActionTriggered = true;
+                    targetScreenPosition = touch.position;
+                    break;
+                }
+            }
+        }
+
+        selecttile(targetScreenPosition);
+        canselectcheck(targetScreenPosition);
         marker();
-        if (Input.GetMouseButtonDown(0))
+
+        if (isActionTriggered)
         {
             weaponaction();
             if (Usetoolworld() == true)
@@ -118,7 +157,6 @@ public class toolscharactercontroller : MonoBehaviour
             return;
         }
 
-        
         energycost(weaponenergycost);
         _attackcontroller.attack(_item.damage, _character2d.lastmotionvector);
         timer = timeout;
@@ -130,20 +168,21 @@ public class toolscharactercontroller : MonoBehaviour
         _character.gettired(cost);
     }
 
-    private void selecttile()
+    private void selecttile(Vector3 screenPosition)
     {
-        selectedtileposition = tilemapreadercontroller.getgridposition(Input.mousePosition, true);
+        selectedtileposition = tilemapreadercontroller.getgridposition(screenPosition, true);
         selectedtileposition.z = 0;
     }
 
-    void canselectcheck()
+    void canselectcheck(Vector3 screenPosition)
     {
         Vector2 characterposition = transform.position;
-        Vector2 cameraposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 cameraposition = Camera.main.ScreenToWorldPoint(screenPosition);
         selectable = Vector2.Distance(characterposition, cameraposition) < maxdistance;
         _markermanager.show(selectable);
         _iconhighlight.Canselect = selectable;
     }
+
     public void marker()
     {
         _markermanager.markedcellposition = selectedtileposition;
